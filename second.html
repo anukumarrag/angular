@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="js/angular.min.js"> </script>
+
+    <script src="js/app2.js"> </script>
+
+
+
+</head>
+
+<body ng-app="myApp">
+
+
+    <div ng-controller="myAppController">
+
+
+        <table>
+            <tr>
+                <td>First Name </td>
+                <td><input type="text" ng-model="employee.firstName" /> </td>
+            </tr>
+
+            <tr>
+                <td>Last Name </td>
+                <td><input type="text" ng-model="employee.secondName" /> </td>
+            </tr>
+
+
+            <tr>
+                <td>Gender </td>
+                <td>
+                    <select name="employee.gender" ng-model="employee.gender">
+                        <option value="select" selected>-----Select------</option>
+                        <option value="Male">Male</option>
+                        <option value="FeMale">FeMale</option>
+                    </select>
+
+
+                </td>
+            </tr>
+
+
+        </table>
+
+<br/>
+<br/>
+
+
+<table>
+<tr><td>FirstName:: {{employee.firstName}}</td></tr>
+<tr><td>LastName:: {{employee.secondName}}</td></tr>
+<tr><td>Gender:: {{employee.gender}}</td></tr>
+</table>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

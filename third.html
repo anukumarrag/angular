@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="js/angular.min.js"> </script>
+
+    <script src="js/app3.js"> </script>
+<link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body ng-app="myApp">
+
+
+    <div ng-controller="myController">
+
+
+        <table>
+            <tr>
+                    <th>Name</th>
+                    <th>likes</th>
+                    <th>dislikes</th>
+                    <th>Like/Dislike</th>
+
+            </tr>
+
+            <tr ng-repeat="technology in technologies">
+                <td>{{technology.name}}</td>
+                 <td>{{technology.likes}}</td>
+                  <td>{{technology.dislikes}}</td>
+                   <td>
+                       <input type="button" name="Like" value="Likes" ng-click="likes(technology)"/>
+                       <input type="button" name="Dislike" value="Dislike" ng-click="dislikes(technology)"/>
+
+                   </td>
+            </tr>
+
+
+        </table>
+
+
+    </div>
+
+<div ng-controller="myController2">
+<ul>
+  <li ng-repeat="country in countries"> {{country.name}} 
+
+      <ul>
+          <li ng-repeat="city in country.city">{{city.name}}</li>
+      </ul>
+
+  </li>
+</ul>
+
+
+</div>
+
+</body>
+
+</html>
